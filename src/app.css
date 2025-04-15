@@ -4,12 +4,16 @@
 	--celadon: hsl(130, 41%, 67%);
 	--dark-celadon: hsl(130, 41%, 40%);
 	--crayola-blue: hsl(221, 100%, 61%);
+	--dark-crayola-blue: hsl(221, 100%, 40%);
 
 	--bg-primary: var(--rich-black);
 
 	--text-primary: var(--lavender-blush);
 	--text-secondary: var(--celadon);
+	--text-tertiary: var(--rich-black);
+
 	--accent-primary: var(--crayola-blue);
+	--accent-secondary: var(--dark-crayola-blue);
 }
 
 body,
