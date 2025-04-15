@@ -1,0 +1,22 @@
+:root {
+	--rich-black: hsl(207, 95%, 8%);
+	--lavender-blush: hsl(333, 21%, 92%);
+	--celadon: hsl(130, 41%, 67%);
+	--dark-celadon: hsl(130, 41%, 40%);
+	--crayola-blue: hsl(221, 100%, 61%);
+
+	--bg-primary: var(--rich-black);
+
+	--text-primary: var(--lavender-blush);
+	--text-secondary: var(--celadon);
+	--accent-primary: var(--crayola-blue);
+}
+
+body,
+html {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	background-color: var(--bg-primary);
+	color: var(--text-primary);
+}
