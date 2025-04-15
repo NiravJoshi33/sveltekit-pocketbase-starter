@@ -105,7 +105,10 @@
 	}
 
 	.error-message {
-		color: #ef4444;
+		color: rgb(239, 68, 68);
+		background-color: rgba(239, 68, 68, 0.2);
+		padding: 0.5em;
+		border-radius: 0.25em;
 		font-size: 0.875rem;
 	}
 

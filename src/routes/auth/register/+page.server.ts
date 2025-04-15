@@ -7,9 +7,6 @@ export const actions: Actions = {
 		const email = data.get('email') as string;
 		const password = data.get('password') as string;
 		const passwordConfirm = data.get('passwordConfirm') as string;
-		console.log('email', email);
-		console.log('password', password);
-		console.log('passwordConfirm', passwordConfirm);
 
 		if (!email || !password || !passwordConfirm) {
 			return fail(400, {
@@ -29,6 +26,18 @@ export const actions: Actions = {
 			const emailHandle = email.split('@')[0].toLowerCase();
 			const randomDigits = Math.floor(1000 + Math.random() * 9000);
 			const username = `${emailHandle}${randomDigits}`;
+
+			// check if email already exists
+			const existingEmail = await locals.pb
+				.collection('users')
+				.getFirstListItem(`email="${email}"`);
+
+			if (existingEmail) {
+				return fail(400, {
+					error: true,
+					message: 'Email already exists'
+				});
+			}
 
 			await locals.pb.collection('users').create({
 				username,
